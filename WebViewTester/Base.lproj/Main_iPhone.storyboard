@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="c81-2t-vQP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="htf-zb-Mdj">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="c81-2t-vQP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KO5-Rd-kUN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="4yZ-Rq-Ix4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVi-RS-Uu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="141"/>
+        </scene>
+        <!--View Controller - Test Pages-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Test Pages" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybq-P7-bZl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ybq-P7-bZl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="KDq-aV-XqY"/>
+                            <constraint firstItem="ybq-P7-bZl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="OKG-RD-dYE"/>
+                            <constraint firstAttribute="trailing" secondItem="ybq-P7-bZl" secondAttribute="trailing" id="Q9x-Gz-lzz"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ybq-P7-bZl" secondAttribute="bottom" id="mRL-5w-CSX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Page Tester" id="f7L-CJ-EQp">
+                        <barButtonItem key="rightBarButtonItem" title="Browse" id="c2I-Bv-rtW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnBrowse" destination="c2I-Bv-rtW" id="xPk-9j-w0c"/>
+                        <outlet property="webView" destination="ybq-P7-bZl" id="UTc-GA-UuM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
